@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!--Metadatos y Datos-->
+	<title>Formulario de Citas Médicas</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="img/icono.png">
+
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/wickedpicker.css">
+
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+	</script>
+</head>
+<body>
+	<h1>Formulario de citas médicas en línea </h1>
+	<div class="bg-agile">
+		<div class="book-appointment">
+			<h2>Hacer una Cita</h2>
+			<form action="#" method="post" name="appointment" id="appointment">
+				<div id="resultados_ajax" class="gaps"></div>
+				<div class="left-agileits-w3layouts same">
+
+					<div class="gaps">
+						<p>Nombre del Paciente</p>
+						<input type="text" name="name" placeholder="" required=""/>
+					</div>	
+					<div class="gaps">	
+						<p>Número de Teléfono</p>
+						<input type="text" name="number" placeholder="" required=""/>
+					</div>
+					<div class="gaps">
+						<p>E-mail</p>
+						<input type="email" name="email" placeholder="" required="" />
+					</div>	
+					<div class="gaps">
+						<p>Síntomas</p>
+						<textarea name="symptoms" placeholder="" required="" ></textarea>
+					</div>
+				</div>
+				<div class="right-agileinfo same">
+					<div class="gaps">
+						<p>Seleccionar Fecha</p>		
+						<input  id="datepicker1" name="datepicker1" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+					</div>
+					<div class="gaps">
+						<p>Departamento</p>	
+						<select class="form-control" name="departament">
+							<option></option>
+							<option value="Cardiología">Cardiología</option>
+							<option value="Oftalmología">Oftalmología</option>
+							<option value="Neurología">Neurología</option>
+							<option value="Psicología">Psicología</option>
+							<option value="Dermatología">Dermatología</option>
+						</select>
+					</div>
+					<div class="gaps">
+						<p>Género</p>	
+						<select class="form-control" name="gender" required>
+							<option></option>
+							<option value="M">Masculino</option>
+							<option value="F">Femenino</option>
+						</select>
+					</div>
+					<div class="gaps">
+						<p>Hora</p>		
+						<input type="text" id="timepicker" name="time" class="timepicker form-control" value="">	
+					</div>
+				</div>
+				<div class="clear"></div>
+				<input type="submit" value="Realizar cita">
+			</form>
+		</div>
+	</div>
+	<div class="copy w3ls">
+		<p class="text-center text-dark">© <span id="output"></span> Formulario de Citas Médicas - Todos los derechos reservados | Desarrollado Por <a href="http://avilariosdiego.github.io/daar/" target="_blank" class="daar">Diego Avila</a></p>
+	</div>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/wickedpicker.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/funciones.js"></script>
+</body>
+</html>
